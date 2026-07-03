@@ -1,5 +1,10 @@
 # Presto [![Build Status](https://travis-ci.org/prestodb/presto.svg?branch=master)](https://travis-ci.org/prestodb/presto)
 
+> [!NOTE]  
+> **Author's Note:** This is a fork of the Presto distributed SQL query engine. My major contribution to this codebase was designing and implementing **Dynamic Catalog Registration** via custom REST endpoints (see [PR #12605](https://github.com/prestodb/presto/pull/12605)).  
+>   
+> Previously, Presto required a full cluster restart whenever a new data source (catalog) was added, causing operational downtime. My implementation modified the core catalog management lifecycle to allow catalogs to be added and removed dynamically on-the-fly, significantly reducing downtime for data engineering teams.
+
 Presto is a distributed SQL query engine for big data.
 
 See the [User Manual](https://prestodb.github.io/docs/current/) for deployment instructions and end user documentation.
